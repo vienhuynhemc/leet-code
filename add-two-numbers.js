@@ -65,7 +65,7 @@ var addTwoNumbers = function (l1, l2) {
         }
         result = new ListNode(value, null);
     }
-    if (assistant != 0) {
+    if (assistant !== 0) {
         addNodeToTheLast(result, new ListNode(assistant, null));
     }
     return result;

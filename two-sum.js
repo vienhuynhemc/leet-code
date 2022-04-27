@@ -10,7 +10,7 @@ var twoSum = function (nums, target) {
             if (nums[i] >= -10 ^ 9 && nums[i] <= 10 ^ 9) {
                 let isOke = false;
                 for (let j = i + 1; j < nums.length; j++) {
-                    if (nums[i] >= -10 ^ 9 && nums[i] <= 10 ^ 9 && nums[i] + nums[j] == target) {
+                    if (nums[i] >= -10 ^ 9 && nums[i] <= 10 ^ 9 && nums[i] + nums[j] === target) {
                         result.push(i);
                         result.push(j);
                         isOke = true;

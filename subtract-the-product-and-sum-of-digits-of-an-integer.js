@@ -3,18 +3,18 @@
  * @return {number}
  */
 var subtractProductAndSum = function (n) {
-  let input = n + "";
-  let sum = 0;
-  let mul = 0;
-  for (let i = 0; i < input.length; i++) {
-    sum += parseInt(input[i]);
-    if (i == 0) {
-      mul = parseInt(input[i]);
-    } else {
-      mul *= parseInt(input[i]);
+    let input = n + "";
+    let sum = 0;
+    let mul = 0;
+    for (let i = 0; i < input.length; i++) {
+        sum += parseInt(input[i]);
+        if (i === 0) {
+            mul = parseInt(input[i]);
+        } else {
+            mul *= parseInt(input[i]);
+        }
     }
-  }
-  return mul - sum;
+    return mul - sum;
 };
 
 console.log(subtractProductAndSum(234));

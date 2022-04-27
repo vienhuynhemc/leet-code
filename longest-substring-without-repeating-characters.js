@@ -5,7 +5,7 @@
 
 function isExistsInArray(array, value) {
     for (let i = 0; i < array.length; i++) {
-        if (array[i] == value) {
+        if (array[i] === value) {
             return true;
         }
     }
@@ -15,7 +15,7 @@ function isExistsInArray(array, value) {
 function getSubStringGoodForMySelf(array, value) {
     let index = 0;
     for (let i = 0; i < array.length; i++) {
-        if (array[i] == value) {
+        if (array[i] === value) {
             index = i + 1;
             break;
         }
