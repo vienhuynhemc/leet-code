@@ -1,17 +1,17 @@
-package loader;
+package load;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class LoadArrayHelper {
+public class LoadArray {
 
-    private static LoadArrayHelper loadIntArray;
+    private static LoadArray loadArray;
 
-    public static LoadArrayHelper getInstance() {
-        if (loadIntArray == null)
-            loadIntArray = new LoadArrayHelper();
-        return loadIntArray;
+    public static LoadArray getInstance() {
+        if (loadArray == null)
+            loadArray = new LoadArray();
+        return loadArray;
     }
 
     public int[] loadIntArrayFromFile(String src) {
