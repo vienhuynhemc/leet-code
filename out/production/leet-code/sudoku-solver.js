@@ -2,6 +2,30 @@
  * @param {character[][]} board
  * @return {void} Do not return anything, modify board in-place instead.
  */
+var solveSudoku = function (board) {
+    let newBoard = getSolverBoard(board);
+    for (let i = 0; i < board.length; i++) {
+        for (let j = 0; j < board[i].length; j++) {
+            board[i][j] = newBoard[i][j];
+        }
+    }
+    console.log(board)
+};
+
+function getSolverBoard(board) {
+    if (board[0][0] !== ".") {
+        return solve(board, 0, 0, -1);
+    } else {
+        let result = null;
+        for (let i = 1; i < 10; i++) {
+            result = solve(board, 0, 0, i);
+            if (result != null) {
+                break;
+            }
+        }
+        return result;
+    }
+}
 
 function isValidSudoku(board) {
     for (let i = 0; i < board.length; i++) {
@@ -82,31 +106,5 @@ function copyArray(board) {
     return result;
 }
 
-var solveSudoku = function (board) {
-    if (board[0][0] !== ".") {
-        return solve(board, 0, 0, -1);
-    } else {
-        let result = null;
-        for (let i = 1; i < 10; i++) {
-            result = solve(board, 0, 0, i);
-            if (result != null) {
-                break;
-            }
-        }
-        return result;
-    }
-};
+solveSudoku([["5", "3", ".", ".", "7", ".", ".", ".", "."], ["6", ".", ".", "1", "9", "5", ".", ".", "."], [".", "9", "8", ".", ".", ".", ".", "6", "."], ["8", ".", ".", ".", "6", ".", ".", ".", "3"], ["4", ".", ".", "8", ".", "3", ".", ".", "1"], ["7", ".", ".", ".", "2", ".", ".", ".", "6"], [".", "6", ".", ".", ".", ".", "2", "8", "."], [".", ".", ".", "4", "1", "9", ".", ".", "5"], [".", ".", ".", ".", "8", ".", ".", "7", "9"]])
 
-console.log(
-    solveSudoku([
-        ["5", "3", ".", ".", "7", ".", ".", ".", "."],
-        ["6", ".", ".", "1", "9", "5", ".", ".", "."],
-        [".", "9", "8", ".", ".", ".", ".", "6", "."],
-        ["8", ".", ".", ".", "6", ".", ".", ".", "3"],
-        ["4", ".", ".", "8", ".", "3", ".", ".", "1"],
-        ["7", ".", ".", ".", "2", ".", ".", ".", "6"],
-        [".", "6", ".", ".", ".", ".", "2", "8", "."],
-        [".", ".", ".", "4", "1", "9", ".", ".", "5"],
-        [".", ".", ".", ".", "8", ".", ".", "7", "9"],
-    ])
-);
