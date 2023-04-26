@@ -3,15 +3,15 @@ public class SumOfDigitsOfStringAfterConvert {
     public int getLucky(String s, int k) {
         int value = 0;
         for (int i = 0; i < s.length(); i++) {
-            value += this.spitAndMerge(s.charAt(i) - 96);
+            value += this.splitAndMerge(s.charAt(i) - 96);
         }
         for (int i = 1; i < k; i++) {
-            value = this.spitAndMerge(value);
+            value = this.splitAndMerge(value);
         }
         return value;
     }
 
-    private int spitAndMerge(int number) {
+    private int splitAndMerge(int number) {
         int result = 0;
         while (number > 0) {
             result += number % 10;
