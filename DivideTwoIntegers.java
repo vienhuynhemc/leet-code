@@ -1,4 +1,4 @@
-import load.LogTimeExecute;
+import log.LogTimeExecute;
 
 public class DivideTwoIntegers {
 
