@@ -5,36 +5,22 @@ public class MaximumNumberOfVowelsInASubstringOfGivenLength {
 
     public int maxVowels(String s, int k) {
         int max = 0;
-        int before = 0;
-        for (int i = 0; i <= s.length() - k; i++) {
-            if (i == 0) {
-                char[] array = s.substring(i, i + k).toCharArray();
-                for (char character : array) {
-                    if (isVowel(character)) {
-                        max++;
-                        if (max == k) {
-                            return k;
-                        }
-                    }
-                }
-                before = max;
-            } else {
-                boolean isBeforeIsVowel = isVowel(s.charAt(i - 1));
-                boolean isAfterIsVowel = isVowel(s.charAt(i + k - 1));
-                int current = before;
-                if (isBeforeIsVowel) {
-                    current--;
-                }
-                if (isAfterIsVowel) {
-                    current++;
-                }
-                if (current == k) {
-                    return current;
-                }
-                if (current > max) {
-                    max = current;
-                }
-                before = current;
+        char[] array = s.toCharArray();
+        for (int i = 0; i < k; i++) {
+            if (isVowel(array[i])) {
+                max++;
+            }
+        }
+        int before = max;
+        for (int i = k; i < array.length; i++) {
+            if (isVowel(array[i])) {
+                before++;
+            }
+            if (isVowel(array[i - k])) {
+                before--;
+            }
+            if (before > max) {
+                max = before;
             }
         }
         return max;
