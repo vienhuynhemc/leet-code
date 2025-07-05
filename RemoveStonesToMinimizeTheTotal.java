@@ -1,4 +1,4 @@
-import load.LoadArray;
+import helper.LoadArray;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;
@@ -29,7 +29,7 @@ public class RemoveStonesToMinimizeTheTotal {
         RemoveStonesToMinimizeTheTotal removeStonesToMinimizeTheTotal = new RemoveStonesToMinimizeTheTotal();
         System.out.println(removeStonesToMinimizeTheTotal.minStoneSum(new int[]{5, 4, 9}, 2));
         System.out.println(removeStonesToMinimizeTheTotal.minStoneSum(new int[]{4, 3, 6, 7}, 3));
-        int[] largeArray = LoadArray.getInstance().loadIntArrayFromFile("data/remove-stones-to-minimize-the-total.txt");
+        int[] largeArray = LoadArray.getInstance().loadIntArrayFromFile("resource/test-data/remove-stones-to-minimize-the-total.txt");
         long start = System.currentTimeMillis();
         System.out.println(removeStonesToMinimizeTheTotal.minStoneSum(largeArray, 98001));
         System.out.println("Time for run: " + (System.currentTimeMillis() - start));

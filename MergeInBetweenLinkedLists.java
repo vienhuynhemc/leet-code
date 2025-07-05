@@ -1,4 +1,4 @@
-import models.ListNode;
+import model.ListNode;
 
 public class MergeInBetweenLinkedLists {
 

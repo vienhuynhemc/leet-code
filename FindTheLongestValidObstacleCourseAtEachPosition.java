@@ -1,5 +1,5 @@
-import load.LoadArray;
-import log.LogTimeExecute;
+import helper.LoadArray;
+import helper.LogTimeExecute;
 
 import java.util.Arrays;
 
@@ -50,9 +50,9 @@ public class FindTheLongestValidObstacleCourseAtEachPosition {
         System.out.println(Arrays.toString(findTheLongestValidObstacleCourseAtEachPosition.longestObstacleCourseAtEachPosition(new int[]{1, 2, 3, 2})));
         System.out.println(Arrays.toString(findTheLongestValidObstacleCourseAtEachPosition.longestObstacleCourseAtEachPosition(new int[]{2, 2, 1})));
         System.out.println(Arrays.toString(findTheLongestValidObstacleCourseAtEachPosition.longestObstacleCourseAtEachPosition(new int[]{3, 1, 5, 6, 4, 2})));
-        int[] array = LoadArray.getInstance().loadIntArrayFromFile("data/find-the-longest-valid-obstacle-course-at-each-position.txt");
+        int[] array = LoadArray.getInstance().loadIntArrayFromFile("resource/test-data/find-the-longest-valid-obstacle-course-at-each-position.txt");
         LogTimeExecute.getInstance().log(unused -> findTheLongestValidObstacleCourseAtEachPosition.longestObstacleCourseAtEachPosition(array));
-        int[] array2 = LoadArray.getInstance().loadIntArrayFromFile("data/find-the-longest-valid-obstacle-course-at-each-position-2.txt");
+        int[] array2 = LoadArray.getInstance().loadIntArrayFromFile("resource/test-data/find-the-longest-valid-obstacle-course-at-each-position-2.txt");
         LogTimeExecute.getInstance().log(unused -> findTheLongestValidObstacleCourseAtEachPosition.longestObstacleCourseAtEachPosition(array2));
     }
 

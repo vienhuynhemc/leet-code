@@ -1,4 +1,4 @@
-import models.TreeNode;
+import model.TreeNode;
 
 public class ValidateBinarySearchTree {
 

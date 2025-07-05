@@ -1,4 +1,4 @@
-import models.ListNode;
+import model.ListNode;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-import log.LogTimeExecute;
+import helper.LogTimeExecute;
 
 public class Pow {
 

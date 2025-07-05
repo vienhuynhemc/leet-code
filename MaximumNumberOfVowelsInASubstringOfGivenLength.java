@@ -1,5 +1,5 @@
-import load.LoadString;
-import log.LogTimeExecute;
+import helper.LoadString;
+import helper.LogTimeExecute;
 
 public class MaximumNumberOfVowelsInASubstringOfGivenLength {
 
@@ -36,7 +36,7 @@ public class MaximumNumberOfVowelsInASubstringOfGivenLength {
         System.out.println(maximumNumberOfVowelsInASubstringOfGivenLength.maxVowels("aeiou", 2));
         System.out.println(maximumNumberOfVowelsInASubstringOfGivenLength.maxVowels("leetcode", 3));
         System.out.println(maximumNumberOfVowelsInASubstringOfGivenLength.maxVowels("weallloveyou", 7));
-        String largeString = LoadString.getInstance().loadStringFromFile("data/maximum-number-of-vowels-in-a-substring-of-given-length.txt");
+        String largeString = LoadString.getInstance().loadStringFromFile("resource/test-data/maximum-number-of-vowels-in-a-substring-of-given-length.txt");
         LogTimeExecute.getInstance().log(unused -> maximumNumberOfVowelsInASubstringOfGivenLength.maxVowels(largeString, 50436));
     }
 
