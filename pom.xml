@@ -112,7 +112,7 @@
 
           <sql>
             <includes>
-              <include>src/main/resources/db/migration/**/*.sql</include>
+              <include>src/main/database/**/*.sql</include>
             </includes>
 
             <dbeaver/>
