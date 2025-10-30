@@ -1,38 +1,37 @@
-
+/* vienhuynhemc */
 public class AppendCharactersToStringToMakeSubsequence {
 
-    public int appendCharacters(String s, String t) {
-        final char[] tChars = t.toCharArray();
-        final char[] sChars = s.toCharArray();
+  public int appendCharacters(String s, String t) {
+    final char[] tChars = t.toCharArray();
+    final char[] sChars = s.toCharArray();
 
-        int prefixCount = 0;
-        int left = 0;
+    int prefixCount = 0;
+    int left = 0;
 
-        for (char tChar : tChars) {
-            boolean isFound = false;
+    for (char tChar : tChars) {
+      boolean isFound = false;
 
-            for (int i = left; i < sChars.length; i++) {
-                if (sChars[i] == tChar) {
-                    prefixCount++;
-                    left = i + 1;
+      for (int i = left; i < sChars.length; i++) {
+        if (sChars[i] == tChar) {
+          prefixCount++;
+          left = i + 1;
 
-                    isFound = true;
+          isFound = true;
 
-                    break;
-                }
-            }
-
-            if (!isFound || left == sChars.length) {
-                break;
-            }
+          break;
         }
+      }
 
-        return tChars.length - prefixCount;
+      if (!isFound || left == sChars.length) {
+        break;
+      }
     }
 
-    public static void main(String[] args) {
-        final var handler = new AppendCharactersToStringToMakeSubsequence();
-        System.out.println(handler.appendCharacters("coaching", "coding"));
-    }
+    return tChars.length - prefixCount;
+  }
 
+  public static void main(String[] args) {
+    final var handler = new AppendCharactersToStringToMakeSubsequence();
+    System.out.println(handler.appendCharacters("coaching", "coding"));
+  }
 }

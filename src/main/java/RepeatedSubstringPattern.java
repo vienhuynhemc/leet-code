@@ -1,29 +1,28 @@
-
+/* vienhuynhemc */
 public class RepeatedSubstringPattern {
 
-    public boolean repeatedSubstringPattern(String s) {
-        int length = s.length();
+  public boolean repeatedSubstringPattern(String s) {
+    int length = s.length();
 
-        for (int i = s.length() - 1; i > 0; i--) {
-            if (length % i != 0) {
-                continue;
-            }
+    for (int i = s.length() - 1; i > 0; i--) {
+      if (length % i != 0) {
+        continue;
+      }
 
-            String subString = s.substring(0, i);
+      String subString = s.substring(0, i);
 
-            if (s.equals(subString.repeat(length / i))) {
-                return true;
-            }
-        }
-
-        return false;
+      if (s.equals(subString.repeat(length / i))) {
+        return true;
+      }
     }
 
-    public static void main(String[] args) {
-        RepeatedSubstringPattern pattern = new RepeatedSubstringPattern();
-        System.out.println(pattern.repeatedSubstringPattern("abab"));
-        System.out.println(pattern.repeatedSubstringPattern("aba"));
-        System.out.println(pattern.repeatedSubstringPattern("abcabcabcabc"));
-    }
+    return false;
+  }
 
+  public static void main(String[] args) {
+    RepeatedSubstringPattern pattern = new RepeatedSubstringPattern();
+    System.out.println(pattern.repeatedSubstringPattern("abab"));
+    System.out.println(pattern.repeatedSubstringPattern("aba"));
+    System.out.println(pattern.repeatedSubstringPattern("abcabcabcabc"));
+  }
 }
