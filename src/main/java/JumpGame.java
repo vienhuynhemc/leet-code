@@ -47,7 +47,7 @@ public class JumpGame {
         JumpGame jumpGame = new JumpGame();
         System.out.println(jumpGame.canJump(new int[]{2, 3, 1, 1, 4}));
         System.out.println(jumpGame.canJump(new int[]{3, 2, 1, 0, 4}));
-        int[] largeArray = LoadArray.getInstance().loadIntArrayFromFile("resource/test-data/jump-game.txt");
+        int[] largeArray = LoadArray.getInstance().loadIntArrayFromFile("src/main/resource/test-data/jump-game.txt");
         LogTimeExecute.getInstance().log(unused -> jumpGame.canJump(largeArray));
     }
 
