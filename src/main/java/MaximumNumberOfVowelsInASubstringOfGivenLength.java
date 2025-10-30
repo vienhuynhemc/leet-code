@@ -1,6 +1,5 @@
-
-import src.main.java.helper.LoadString;
-import src.main.java.helper.LogTimeExecute;
+import helper.LoadString;
+import helper.LogTimeExecute;
 
 public class MaximumNumberOfVowelsInASubstringOfGivenLength {
 

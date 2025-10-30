@@ -1,5 +1,4 @@
-
-import src.main.java.model.TreeNode;
+import model.TreeNode;
 
 public class SumRootToLeafNumbers {
 

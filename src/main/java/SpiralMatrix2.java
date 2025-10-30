@@ -1,5 +1,6 @@
 
-import src.main.java.helper.LogTimeExecute;
+
+import helper.LogTimeExecute;
 
 import java.util.Arrays;
 

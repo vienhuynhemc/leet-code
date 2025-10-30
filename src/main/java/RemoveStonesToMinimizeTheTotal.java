@@ -1,5 +1,6 @@
 
-import src.main.java.helper.LoadArray;
+
+import helper.LoadArray;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;

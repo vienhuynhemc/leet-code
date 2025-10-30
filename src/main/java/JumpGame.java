@@ -1,6 +1,7 @@
 
-import src.main.java.helper.LoadArray;
-import src.main.java.helper.LogTimeExecute;
+
+import helper.LoadArray;
+import helper.LogTimeExecute;
 
 import java.util.HashSet;
 import java.util.Set;

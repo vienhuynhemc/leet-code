@@ -5,7 +5,7 @@ public class FindTheIndexOfTheFirstOccurrenceInAString {
         return haystack.indexOf(needle);
     }
 
-    public static void main(String[] args) {
+    static void main() {
         FindTheIndexOfTheFirstOccurrenceInAString findTheIndexOfTheFirstOccurrenceInAString = new FindTheIndexOfTheFirstOccurrenceInAString();
         System.out.println(findTheIndexOfTheFirstOccurrenceInAString.strStr("sadbutsad", "sad"));
         System.out.println(findTheIndexOfTheFirstOccurrenceInAString.strStr("leetcode", "leeto"));

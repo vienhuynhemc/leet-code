@@ -1,4 +1,4 @@
-package src.main.java.helper;
+package helper;
 
 import java.util.function.Function;
 

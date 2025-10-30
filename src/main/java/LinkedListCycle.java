@@ -1,5 +1,4 @@
-
-import src.main.java.model.ListNode;
+import model.ListNode;
 
 public class LinkedListCycle {
 

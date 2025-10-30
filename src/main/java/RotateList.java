@@ -1,5 +1,6 @@
 
-import src.main.java.model.ListNode;
+
+import model.ListNode;
 
 import java.util.ArrayList;
 import java.util.List;
