@@ -1,5 +1,3 @@
-package src.main.java;
-
 import java.util.Arrays;
 
 public class RunningSumOf1dArray {

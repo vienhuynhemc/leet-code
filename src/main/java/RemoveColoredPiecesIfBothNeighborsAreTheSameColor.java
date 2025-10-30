@@ -1,4 +1,3 @@
-package src.main.java;
 
 public class RemoveColoredPiecesIfBothNeighborsAreTheSameColor {
 
@@ -42,8 +41,8 @@ public class RemoveColoredPiecesIfBothNeighborsAreTheSameColor {
         return numberOfAMove - 1 >= numberOfBMove;
     }
 
-    public static void main(String[] args) {
-        var handler = new RemoveColoredPiecesIfBothNeighborsAreTheSameColor();
+    static void main() {
+        final var handler = new RemoveColoredPiecesIfBothNeighborsAreTheSameColor();
         System.out.println(handler.winnerOfGame("AAAABBBB"));
     }
 

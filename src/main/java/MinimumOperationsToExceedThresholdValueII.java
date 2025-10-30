@@ -1,4 +1,3 @@
-package src.main.java;
 
 import java.util.PriorityQueue;
 
@@ -24,7 +23,7 @@ public class MinimumOperationsToExceedThresholdValueII {
         return ans;
     }
 
-    public static void main(String[] args) {
+    static void main() {
         final var tester = new MinimumOperationsToExceedThresholdValueII();
         System.out.println(tester.minOperations(new int[]{2, 11, 10, 1, 3}, 10));
         System.out.println(tester.minOperations(new int[]{1, 1, 2, 4, 9}, 20));

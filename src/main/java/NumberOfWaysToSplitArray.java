@@ -1,5 +1,3 @@
-package src.main.java;
-
 public class NumberOfWaysToSplitArray {
 
     public int waysToSplitArray(int[] nums) {

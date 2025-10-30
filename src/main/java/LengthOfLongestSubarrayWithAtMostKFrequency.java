@@ -1,4 +1,3 @@
-package src.main.java;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -39,8 +38,8 @@ public class LengthOfLongestSubarrayWithAtMostKFrequency {
         return maxSubarrayLength;
     }
 
-    public static void main(String[] args) {
-        var handler = new LengthOfLongestSubarrayWithAtMostKFrequency();
+    static void main() {
+        final var handler = new LengthOfLongestSubarrayWithAtMostKFrequency();
         System.out.println(handler.maxSubarrayLength(new int[]{1, 2, 2, 1, 3}, 1));
     }
 

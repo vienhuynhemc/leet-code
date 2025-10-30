@@ -1,4 +1,3 @@
-package src.main.java;
 
 import static java.lang.System.out;
 

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.vienhuynhemc</groupId>
+  <artifactId>leetcode</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>leet-code</name>
+  <description>Leet Code learning project</description>
+  <url/>
+  <licenses>
+    <license/>
+  </licenses>
+  <developers>
+    <developer/>
+  </developers>
+  <scm>
+    <connection/>
+    <developerConnection/>
+    <tag/>
+    <url/>
+  </scm>
+  <properties>
+    <java.version>25</java.version>
+      <spotless.version>3.0.0</spotless.version>
+    <prettier.version>3.3.3</prettier.version>
+    <prettier-plugin-java.version>2.6.4</prettier-plugin-java.version>
+    <prettier-plugin-sql.version>0.18.1</prettier-plugin-sql.version>
+  </properties>
+  <dependencies>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <!-- Spotless: https://github.com/diffplug/spotless -->
+      <plugin>
+        <groupId>com.diffplug.spotless</groupId>
+        <artifactId>spotless-maven-plugin</artifactId>
+        <version>${spotless.version}</version>
+        <configuration>
+          <formats>
+            <format>
+              <includes>
+                <include>.gitignore</include>
+              </includes>
+              <trimTrailingWhitespace/>
+              <endWithNewline/>
+              <indent>
+                <tabs>true</tabs>
+                <spacesPerTab>2</spacesPerTab>
+              </indent>
+            </format>
+          </formats>
+
+          <java>
+            <includes>
+              <include>src/main/java/**/*.java</include>
+              <include>src/test/java/**/*.java</include>
+            </includes>
+
+            <cleanthat/>
+            <googleJavaFormat/>
+            <importOrder/>
+            <removeUnusedImports/>
+            <formatAnnotations/>
+
+            <prettier>
+              <devDependencyProperties>
+                <property>
+                  <name>prettier</name>
+                  <value>${prettier.version}</value>
+                </property>
+                <property>
+                  <name>prettier-plugin-java</name>
+                  <value>${prettier-plugin-java.version}</value>
+                </property>
+              </devDependencyProperties>
+              <config>
+                <printWidth>120</printWidth>
+                <plugins>prettier-plugin-java</plugins>
+              </config>
+            </prettier>
+
+            <licenseHeader>
+              <content>/* vienhuynhemc */</content>
+            </licenseHeader>
+          </java>
+
+          <pom>
+            <includes>
+              <include>pom.xml</include>
+            </includes>
+            <sortPom>
+              <expandEmptyElements>false</expandEmptyElements>
+            </sortPom>
+          </pom>
+
+          <markdown>
+            <includes>
+              <include>README.md</include>
+            </includes>
+            <flexmark/>
+          </markdown>
+
+          <yaml>
+            <includes>
+              <include>src/**/*.yaml</include>
+            </includes>
+
+            <jackson/>
+            <prettier/>
+          </yaml>
+
+          <sql>
+            <includes>
+              <include>src/main/resources/db/migration/**/*.sql</include>
+            </includes>
+
+            <dbeaver/>
+
+            <prettier>
+              <devDependencyProperties>
+                <property>
+                  <name>prettier</name>
+                  <value>${prettier.version}</value>
+                </property>
+                <property>
+                  <name>prettier-plugin-sql</name>
+                  <value>${prettier-plugin-sql.version}</value>
+                </property>
+              </devDependencyProperties>
+              <config>
+                <plugins>prettier-plugin-sql</plugins>
+                <language>postgresql</language>
+                <expressionWidth>120</expressionWidth>
+              </config>
+            </prettier>
+          </sql>
+        </configuration>
+      </plugin>
+      <!-- End - Spotless: https://github.com/diffplug/spotless -->
+    </plugins>
+  </build>
+
+</project>

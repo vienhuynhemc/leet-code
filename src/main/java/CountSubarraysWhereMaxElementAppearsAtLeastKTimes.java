@@ -1,4 +1,3 @@
-package src.main.java;
 
 public class CountSubarraysWhereMaxElementAppearsAtLeastKTimes {
 
@@ -39,8 +38,8 @@ public class CountSubarraysWhereMaxElementAppearsAtLeastKTimes {
         return totalSubarray;
     }
 
-    public static void main(String[] args) {
-        var handler = new CountSubarraysWhereMaxElementAppearsAtLeastKTimes();
+    static void main() {
+        final var handler = new CountSubarraysWhereMaxElementAppearsAtLeastKTimes();
         System.out.println(handler.countSubarrays(new int[]{21, 11, 13, 15, 16, 21, 8, 9, 6, 21}, 2));
     }
 

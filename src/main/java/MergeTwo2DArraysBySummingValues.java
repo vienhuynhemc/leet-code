@@ -1,5 +1,3 @@
-package src.main.java;
-
 public class MergeTwo2DArraysBySummingValues {
 
     public int[][] mergeArrays(int[][] nums1, int[][] nums2) {

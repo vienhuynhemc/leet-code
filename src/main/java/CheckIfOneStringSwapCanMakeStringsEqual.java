@@ -1,5 +1,3 @@
-package src.main.java;
-
 public class CheckIfOneStringSwapCanMakeStringsEqual {
 
     public boolean areAlmostEqual(String s1, String s2) {
@@ -34,7 +32,7 @@ public class CheckIfOneStringSwapCanMakeStringsEqual {
                 && s1.charAt(secondDiffIndex) == s2.charAt(firstDiffIndex);
     }
 
-    public static void main(String[] args) {
+    static void main() {
         final var tester = new CheckIfOneStringSwapCanMakeStringsEqual();
         System.out.println(tester.areAlmostEqual("bank", "kanb"));
         System.out.println(tester.areAlmostEqual("attack", "defend"));

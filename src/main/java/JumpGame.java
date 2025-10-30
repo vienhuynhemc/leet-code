@@ -1,4 +1,3 @@
-package src.main.java;
 
 import src.main.java.helper.LoadArray;
 import src.main.java.helper.LogTimeExecute;

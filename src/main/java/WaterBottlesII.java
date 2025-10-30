@@ -1,4 +1,3 @@
-package src.main.java;
 
 public class WaterBottlesII {
 
@@ -20,8 +19,8 @@ public class WaterBottlesII {
         return drinkBottles;
     }
 
-    public static void main(String[] args) {
-        var handler = new WaterBottlesII();
+    static void main() {
+        final var handler = new WaterBottlesII();
         System.out.println(handler.maxBottlesDrunk(10, 3));
     }
 }

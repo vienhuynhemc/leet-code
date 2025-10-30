@@ -1,4 +1,3 @@
-package src.main.java;
 
 public class CountAlternatingSubarrays {
     public long countAlternatingSubarrays(int[] nums) {
@@ -31,8 +30,8 @@ public class CountAlternatingSubarrays {
         return count;
     }
 
-    public static void main(String[] args) {
-        var handler = new CountAlternatingSubarrays();
+    static void main() {
+        final var handler = new CountAlternatingSubarrays();
         System.out.println(handler.countAlternatingSubarrays(new int[]{1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1}));
     }
 }

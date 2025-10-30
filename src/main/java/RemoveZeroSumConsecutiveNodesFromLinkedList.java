@@ -1,4 +1,3 @@
-package src.main.java;
 
 import src.main.java.model.ListNode;
 
@@ -27,8 +26,8 @@ public class RemoveZeroSumConsecutiveNodesFromLinkedList {
         return head;
     }
 
-    public static void main(String[] args) {
-        var handler = new RemoveZeroSumConsecutiveNodesFromLinkedList();
+    static void main() {
+        final var handler = new RemoveZeroSumConsecutiveNodesFromLinkedList();
         System.out.println(handler.removeZeroSumSublists(new ListNode(1, new ListNode(0, new ListNode(0, new ListNode(-1, new ListNode(2, new ListNode(-1, new ListNode(0)))))))));
     }
 

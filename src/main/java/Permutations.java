@@ -1,8 +1,8 @@
-package src.main.java;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Permutations {
 
@@ -27,8 +27,8 @@ public class Permutations {
         }
     }
 
-    public static void main(String[] args) {
-        Permutations permutations = new Permutations();
+    static void main() {
+        final Permutations permutations = new Permutations();
         System.out.println(permutations.permute(new int[]{1, 2, 3}));
         System.out.println(permutations.permute(new int[]{0, 1}));
         System.out.println(permutations.permute(new int[]{1}));
