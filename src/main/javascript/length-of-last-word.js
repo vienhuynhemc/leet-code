@@ -3,12 +3,12 @@
  * @return {number}
  */
 var lengthOfLastWord = function (s) {
-    s = s.trim();
-    while (s.includes("  ")) {
-        s = s.replaceAll("  ", " ");
-    }
-    let array = s.split(" ");
-    return array[array.length - 1].length;
+  s = s.trim();
+  while (s.includes("  ")) {
+    s = s.replaceAll("  ", " ");
+  }
+  let array = s.split(" ");
+  return array[array.length - 1].length;
 };
 
 console.log(lengthOfLastWord("Hello World"));

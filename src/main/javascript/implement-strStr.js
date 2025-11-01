@@ -4,36 +4,36 @@
  * @return {number}
  */
 var strStr = function (haystack, needle) {
-    let isStart = false;
-    let count = 0;
-    let index = -1;
-    let i = 0;
-    while (i < haystack.length) {
-        if (!isStart) {
-            if (haystack[i] === needle[count]) {
-                isStart = true;
-                index = i;
-                count++;
-                if (count === needle.length) {
-                    return index;
-                }
-            }
-        } else {
-            if (haystack[i] === needle[count]) {
-                count++;
-                if (count === needle.length) {
-                    return index;
-                }
-            } else {
-                i = i - count;
-                count = 0;
-                isStart = false;
-            }
+  let isStart = false;
+  let count = 0;
+  let index = -1;
+  let i = 0;
+  while (i < haystack.length) {
+    if (!isStart) {
+      if (haystack[i] === needle[count]) {
+        isStart = true;
+        index = i;
+        count++;
+        if (count === needle.length) {
+          return index;
         }
-        i++;
+      }
+    } else {
+      if (haystack[i] === needle[count]) {
+        count++;
+        if (count === needle.length) {
+          return index;
+        }
+      } else {
+        i = i - count;
+        count = 0;
+        isStart = false;
+      }
     }
-    if (count < needle.length) return -1;
-    return index;
+    i++;
+  }
+  if (count < needle.length) return -1;
+  return index;
 };
 
 console.log(strStr("hello", "ll"));

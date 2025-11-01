@@ -136,6 +136,16 @@
               </config>
             </prettier>
           </sql>
+
+          <javascript>
+            <includes>
+              <include>src/main/javascript/**/*.js</include>
+            </includes>
+
+            <prettier>
+              <prettierVersion>${prettier.version}</prettierVersion>
+            </prettier>
+          </javascript>
         </configuration>
       </plugin>
       <!-- End - Spotless: https://github.com/diffplug/spotless -->
