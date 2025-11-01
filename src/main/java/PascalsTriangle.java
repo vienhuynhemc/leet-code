@@ -38,7 +38,7 @@ public class PascalsTriangle {
     return pascalsTriangle;
   }
 
-  public static void main(String[] args) {
+  static void main() {
     PascalsTriangle service = new PascalsTriangle();
     System.out.println(service.generate(1));
     System.out.println(service.generate(2));

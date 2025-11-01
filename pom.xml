@@ -22,6 +22,7 @@
   </scm>
   <properties>
     <java.version>25</java.version>
+    <maven.compiler.release>${java.version}</maven.compiler.release>
     <spotless.version>3.0.0</spotless.version>
     <prettier.version>3.3.3</prettier.version>
     <prettier-plugin-java.version>2.6.4</prettier-plugin-java.version>
