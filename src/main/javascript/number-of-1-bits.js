@@ -6,7 +6,7 @@ var hammingWeight = function (n) {
   let input = n.toString(2);
   let count = 0;
   for (let i = 0; i < input.length; i++) {
-    if (input[i] === "1") {
+    if (input[i] === '1') {
       count++;
     }
   }

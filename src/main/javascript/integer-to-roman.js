@@ -3,40 +3,40 @@
  * @return {string}
  */
 var intToRoman = function (num) {
-  let result = "";
-  let nowAccess = "";
+  let result = '';
+  let nowAccess = '';
   let count = 0;
   let lastCount = 0;
   while (num > 99) {
     num -= 100;
     count++;
     if (count === 1) {
-      nowAccess = "C";
+      nowAccess = 'C';
       lastCount = 1;
     } else if (count === 4) {
-      nowAccess = "CD";
+      nowAccess = 'CD';
       lastCount = 4;
     } else if (count === 5) {
-      nowAccess = "D";
+      nowAccess = 'D';
       lastCount = 5;
     } else if (count === 9) {
-      nowAccess = "CM";
+      nowAccess = 'CM';
       lastCount = 9;
     } else if (count === 10) {
-      nowAccess = "M";
+      nowAccess = 'M';
       lastCount = 10;
     } else if (count === 11) {
       count = 1;
       lastCount = 1;
       result += nowAccess;
-      nowAccess = "C";
+      nowAccess = 'C';
     }
   }
   count -= lastCount;
   result += nowAccess;
-  nowAccess = "";
+  nowAccess = '';
   for (let i = 0; i < count; i++) {
-    result += "C";
+    result += 'C';
   }
   count = 0;
   lastCount = 0;
@@ -44,32 +44,32 @@ var intToRoman = function (num) {
     num -= 10;
     count++;
     if (count === 1) {
-      nowAccess = "X";
+      nowAccess = 'X';
       lastCount = 1;
     } else if (count === 4) {
-      nowAccess = "XL";
+      nowAccess = 'XL';
       lastCount = 4;
     } else if (count === 5) {
-      nowAccess = "L";
+      nowAccess = 'L';
       lastCount = 5;
     } else if (count === 9) {
-      nowAccess = "XC";
+      nowAccess = 'XC';
       lastCount = 9;
     } else if (count === 10) {
-      nowAccess = "C";
+      nowAccess = 'C';
       lastCount = 10;
     } else if (count === 11) {
       count = 1;
       lastCount = 1;
       result += nowAccess;
-      nowAccess = "X";
+      nowAccess = 'X';
     }
   }
   count -= lastCount;
   result += nowAccess;
-  nowAccess = "";
+  nowAccess = '';
   for (let i = 0; i < count; i++) {
-    result += "X";
+    result += 'X';
   }
   count = 0;
   lastCount = 0;
@@ -77,31 +77,31 @@ var intToRoman = function (num) {
     num -= 1;
     count++;
     if (count === 1) {
-      nowAccess = "I";
+      nowAccess = 'I';
       lastCount = 1;
     } else if (count === 4) {
-      nowAccess = "IV";
+      nowAccess = 'IV';
       lastCount = 4;
     } else if (count === 5) {
-      nowAccess = "V";
+      nowAccess = 'V';
       lastCount = 5;
     } else if (count === 9) {
-      nowAccess = "IX";
+      nowAccess = 'IX';
       lastCount = 9;
     } else if (count === 10) {
-      nowAccess = "X";
+      nowAccess = 'X';
       lastCount = 10;
     } else if (count === 11) {
       lastCount = 1;
       count = 1;
       result += nowAccess;
-      nowAccess = "I";
+      nowAccess = 'I';
     }
   }
   count -= lastCount;
   result += nowAccess;
   for (let i = 0; i < count; i++) {
-    result += "I";
+    result += 'I';
   }
   return result;
 };

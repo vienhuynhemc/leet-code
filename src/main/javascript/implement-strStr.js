@@ -36,7 +36,7 @@ var strStr = function (haystack, needle) {
   return index;
 };
 
-console.log(strStr("hello", "ll"));
-console.log(strStr("aaaaa", "bba"));
-console.log(strStr("aaaa", "aaaaa"));
-console.log(strStr("mississippi", "issip"));
+console.log(strStr('hello', 'll'));
+console.log(strStr('aaaaa', 'bba'));
+console.log(strStr('aaaa', 'aaaaa'));
+console.log(strStr('mississippi', 'issip'));

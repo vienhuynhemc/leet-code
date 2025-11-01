@@ -20,7 +20,7 @@ function getSubStringGoodForMySelf(array, value) {
       break;
     }
   }
-  let result = "";
+  let result = '';
   for (let i = index; i < array.length; i++) {
     result += array[i];
   }
@@ -51,7 +51,7 @@ var lengthOfLongestSubstring = function (s) {
   return result;
 };
 
-console.log(lengthOfLongestSubstring("abcabcbb"));
-console.log(lengthOfLongestSubstring("bbbbb"));
-console.log(lengthOfLongestSubstring("pwwkew"));
-console.log(lengthOfLongestSubstring("dvdf"));
+console.log(lengthOfLongestSubstring('abcabcbb'));
+console.log(lengthOfLongestSubstring('bbbbb'));
+console.log(lengthOfLongestSubstring('pwwkew'));
+console.log(lengthOfLongestSubstring('dvdf'));

@@ -31,10 +31,4 @@ var trimBST = function (root, low, high) {
   return root;
 };
 
-console.log(
-  trimBST(
-    new TreeNode(1, new TreeNode(0, null, null), new TreeNode(2, null, null)),
-    1,
-    2,
-  ),
-);
+console.log(trimBST(new TreeNode(1, new TreeNode(0, null, null), new TreeNode(2, null, null)), 1, 2));

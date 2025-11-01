@@ -40,27 +40,16 @@ function browserTree(node, nodes) {
 }
 
 console.log(
-  kthSmallest(
-    new TreeNode(
-      3,
-      new TreeNode(1, null, new TreeNode(2, null, null)),
-      new TreeNode(4, null, null),
-    ),
-    1,
-  ),
+  kthSmallest(new TreeNode(3, new TreeNode(1, null, new TreeNode(2, null, null)), new TreeNode(4, null, null)), 1)
 );
 
 console.log(
   kthSmallest(
     new TreeNode(
       5,
-      new TreeNode(
-        3,
-        new TreeNode(2, new TreeNode(1, null, null), null),
-        new TreeNode(4, null, null),
-      ),
-      new TreeNode(6, null, null),
+      new TreeNode(3, new TreeNode(2, new TreeNode(1, null, null), null), new TreeNode(4, null, null)),
+      new TreeNode(6, null, null)
     ),
-    3,
-  ),
+    3
+  )
 );

@@ -13,8 +13,7 @@ var reverse = function (x) {
     result = result * 10 + (x % 10);
     x = parseInt(x / 10);
   }
-  if (result * help < Math.pow(-2, 31) || result * help > Math.pow(2, 31) - 1)
-    return 0;
+  if (result * help < Math.pow(-2, 31) || result * help > Math.pow(2, 31) - 1) return 0;
   return result * help;
 };
 

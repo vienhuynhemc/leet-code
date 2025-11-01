@@ -7,32 +7,32 @@ var romanToInt = function (s) {
   for (let i = 0; i < s.length; i++) {
     let process = false;
     if (i + 1 < s.length) {
-      if (s[i] === "I") {
-        if (s[i + 1] === "V") {
+      if (s[i] === 'I') {
+        if (s[i + 1] === 'V') {
           result += 4;
           i++;
           process = true;
-        } else if (s[i + 1] === "X") {
+        } else if (s[i + 1] === 'X') {
           result += 9;
           i++;
           process = true;
         }
-      } else if (s[i] === "X") {
-        if (s[i + 1] === "L") {
+      } else if (s[i] === 'X') {
+        if (s[i + 1] === 'L') {
           result += 40;
           i++;
           process = true;
-        } else if (s[i + 1] === "C") {
+        } else if (s[i + 1] === 'C') {
           result += 90;
           i++;
           process = true;
         }
-      } else if (s[i] === "C") {
-        if (s[i + 1] === "D") {
+      } else if (s[i] === 'C') {
+        if (s[i + 1] === 'D') {
           result += 400;
           i++;
           process = true;
-        } else if (s[i + 1] === "M") {
+        } else if (s[i + 1] === 'M') {
           result += 900;
           i++;
           process = true;
@@ -40,19 +40,19 @@ var romanToInt = function (s) {
       }
     }
     if (!process) {
-      if (s[i] === "I") {
+      if (s[i] === 'I') {
         result += 1;
-      } else if (s[i] === "V") {
+      } else if (s[i] === 'V') {
         result += 5;
-      } else if (s[i] === "X") {
+      } else if (s[i] === 'X') {
         result += 10;
-      } else if (s[i] === "L") {
+      } else if (s[i] === 'L') {
         result += 50;
-      } else if (s[i] === "C") {
+      } else if (s[i] === 'C') {
         result += 100;
-      } else if (s[i] === "D") {
+      } else if (s[i] === 'D') {
         result += 500;
-      } else if (s[i] === "M") {
+      } else if (s[i] === 'M') {
         result += 1000;
       }
     }
@@ -60,6 +60,6 @@ var romanToInt = function (s) {
   return result;
 };
 
-console.log(romanToInt("III"));
-console.log(romanToInt("LVIII"));
-console.log(romanToInt("MCMXCIV"));
+console.log(romanToInt('III'));
+console.log(romanToInt('LVIII'));
+console.log(romanToInt('MCMXCIV'));

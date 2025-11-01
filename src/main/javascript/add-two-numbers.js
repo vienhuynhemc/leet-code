@@ -74,25 +74,16 @@ var addTwoNumbers = function (l1, l2) {
 console.log(
   addTwoNumbers(
     new ListNode(2, new ListNode(4, new ListNode(3, null))),
-    new ListNode(5, new ListNode(6, new ListNode(4, null))),
-  ),
+    new ListNode(5, new ListNode(6, new ListNode(4, null)))
+  )
 );
 console.log(addTwoNumbers(new ListNode(0, null), new ListNode(0, null)));
 console.log(
   addTwoNumbers(
     new ListNode(
       9,
-      new ListNode(
-        9,
-        new ListNode(
-          9,
-          new ListNode(
-            9,
-            new ListNode(9, new ListNode(9, new ListNode(9, null))),
-          ),
-        ),
-      ),
+      new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9, null))))))
     ),
-    new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9, null)))),
-  ),
+    new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9, null))))
+  )
 );

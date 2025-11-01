@@ -42,10 +42,10 @@ console.log(
     new TreeNode(
       4,
       new TreeNode(2, new TreeNode(1, null, null), new TreeNode(3, null, null)),
-      new TreeNode(7, null, null),
+      new TreeNode(7, null, null)
     ),
-    2,
-  ),
+    2
+  )
 );
 
 console.log(
@@ -53,8 +53,8 @@ console.log(
     new TreeNode(
       4,
       new TreeNode(2, new TreeNode(1, null, null), new TreeNode(3, null, null)),
-      new TreeNode(7, null, null),
+      new TreeNode(7, null, null)
     ),
-    5,
-  ),
+    5
+  )
 );

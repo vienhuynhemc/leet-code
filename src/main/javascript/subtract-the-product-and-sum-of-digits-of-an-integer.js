@@ -3,7 +3,7 @@
  * @return {number}
  */
 var subtractProductAndSum = function (n) {
-  let input = n + "";
+  let input = n + '';
   let sum = 0;
   let mul = 0;
   for (let i = 0; i < input.length; i++) {

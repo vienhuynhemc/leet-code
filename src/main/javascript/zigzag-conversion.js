@@ -5,7 +5,7 @@
  */
 var convert = function (s, numRows) {
   if (numRows > s.length) return s;
-  let result = "";
+  let result = '';
   let space = getSpace(numRows);
   let index = 0;
   for (let i = 0; i < numRows; i++) {
@@ -42,6 +42,6 @@ function getSpace(numRows) {
   return (numRows - 1) * 2;
 }
 
-console.log(convert("PAYPALISHIRING", 3));
-console.log(convert("PAYPALISHIRING", 4));
-console.log(convert("A", 1));
+console.log(convert('PAYPALISHIRING', 3));
+console.log(convert('PAYPALISHIRING', 4));
+console.log(convert('A', 1));
