@@ -2,7 +2,6 @@
 import java.util.HashSet;
 import java.util.Set;
 
-/* vienhuynhemc */
 public class CountUnguardedCellsInTheGrid {
 
   public record Pair(int first, int second) {}
