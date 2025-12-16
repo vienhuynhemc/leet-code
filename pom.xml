@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.vienhuynhemc</groupId>
-  <artifactId>leetcode</artifactId>
+  <artifactId>leet-code</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>leet-code</name>
   <description>Leet Code learning project</description>
