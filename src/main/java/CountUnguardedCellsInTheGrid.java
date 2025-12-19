@@ -4,7 +4,7 @@ import java.util.Set;
 
 public class CountUnguardedCellsInTheGrid {
 
-  public record Pair(int first, int second) {}
+  private record Pair(int first, int second) {}
 
   public int countUnguarded(int m, int n, int[][] guards, int[][] walls) {
     final Set<Pair> guardsSet = new HashSet<>();
