@@ -2,19 +2,15 @@
 public class MaximumSubarray {
 
   public int maxSubArray(int[] nums) {
-    int maxCurrentSum = 0;
-    int maxSum = 0;
-    for (int num : nums) {
-      maxCurrentSum += num;
-      if (maxCurrentSum > maxSum) maxSum = maxCurrentSum;
-      if (maxCurrentSum < 0) maxCurrentSum = 0;
+    int maxSoFar = nums[0];
+    int current = nums[0];
+
+    for (int i = 1; i < nums.length; i++) {
+      current = Math.max(nums[i], nums[i] + current);
+      maxSoFar = Math.max(maxSoFar, current);
     }
-    if (maxSum == 0) {
-      int max = nums[0];
-      for (int value : nums) if (value > max) max = value;
-      maxSum = max;
-    }
-    return maxSum;
+
+    return maxSoFar;
   }
 
   public static void main(String[] args) {
