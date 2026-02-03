@@ -2,32 +2,24 @@
 public class TrionicArrayI {
 
   public boolean isTrionic(int[] nums) {
-    int reverseCount = 0;
-    boolean isIncrease = true;
+    int p = 0;
 
-    for (int i = 1; i < nums.length; i++) {
-      if (isIncrease) {
-        if (nums[i] < nums[i - 1]) {
-          reverseCount++;
-          isIncrease = false;
-        }
-      } else {
-        if (nums[i] > nums[i - 1]) {
-          reverseCount++;
-          isIncrease = true;
-        }
-      }
+    while (p < nums.length - 1 && nums[p] < nums[p + 1]) p++;
+    if (p == 0) return false;
 
-      if (reverseCount > 2) {
-        return false;
-      }
-    }
+    int q = p;
+    while (q < nums.length - 1 && nums[q] > nums[q + 1]) q++;
+    if (q == p) return false;
 
-    return reverseCount == 2;
+    int n = q;
+    while (n < nums.length - 1 && nums[n] < nums[n + 1]) n++;
+    if (n == q) return false;
+
+    return n == nums.length - 1;
   }
 
-    static void main() {
-        final var test = new TrionicArrayI();
-        System.out.println(test.isTrionic(new int[]{2,1,3}));
-    }
+  static void main() {
+    final var test = new TrionicArrayI();
+    System.out.println(test.isTrionic(new int[] { 3, 7, 1 }));
+  }
 }
