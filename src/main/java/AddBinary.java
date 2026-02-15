@@ -4,39 +4,31 @@ import static java.lang.System.out;
 public class AddBinary {
 
   public String addBinary(String a, String b) {
-    StringBuilder builder = new StringBuilder();
+    final StringBuilder builder = new StringBuilder();
+
     int k = 1;
     int remain = 0;
+
     while (true) {
       Character charOfA = null;
-      if (a.length() - k >= 0) {
-        charOfA = a.charAt(a.length() - k);
-      }
+      if (a.length() - k >= 0) charOfA = a.charAt(a.length() - k);
 
       Character charOfB = null;
-      if (b.length() - k >= 0) {
-        charOfB = b.charAt(b.length() - k);
-      }
+      if (b.length() - k >= 0) charOfB = b.charAt(b.length() - k);
 
-      if (charOfA == null && charOfB == null) {
-        break;
-      }
+      if (charOfA == null && charOfB == null) break;
 
-      int result = plusTwoChar(charOfA, charOfB, remain);
-      if (result > 1) {
-        result = result % 2;
-        remain = 1;
-      } else {
-        remain = 0;
-      }
+      final int sumOfTwoChar = plusTwoChar(charOfA, charOfB, remain);
+
+      int result = sumOfTwoChar % 2;
+      remain = sumOfTwoChar > 1 ? 1 : 0;
 
       builder.insert(0, result);
       k++;
     }
 
-    if (remain != 0) {
-      builder.insert(0, 1);
-    }
+    if (remain != 0) builder.insert(0, remain);
+
     return builder.toString();
   }
 
