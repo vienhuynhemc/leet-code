@@ -1,51 +1,32 @@
 /* vienhuynhemc */
 import helper.LoadArray;
 import helper.LogTimeExecute;
-import java.util.HashSet;
-import java.util.Set;
 
 public class JumpGame {
 
-  private final Set<Integer> tracking;
-
-  public JumpGame() {
-    this.tracking = new HashSet<>();
-  }
-
   public boolean canJump(int[] nums) {
-    if (nums.length == 0) {
-      return true;
-    }
-    this.tracking.clear();
-    return jump(0, nums);
-  }
+    final boolean[] canJumpToEnd = new boolean[nums.length];
+    canJumpToEnd[nums.length - 1] = true;
 
-  private boolean jump(int index, int[] nums) {
-    if (index == nums.length - 1) {
-      return true;
-    }
-    if (this.tracking.contains(index)) {
-      return false;
-    }
-    if (index >= nums.length || nums[index] == 0) {
-      this.tracking.add(index);
-      return false;
-    }
-    for (int i = nums[index]; i > 0; i--) {
-      boolean canJump = jump(index + i, nums);
-      if (canJump) {
-        return true;
+    int index = nums.length - 1;
+    while (index-- > 0) {
+      for (int i = nums[index]; i >= 1; i--) {
+        final int newIndex = index + i;
+        if (newIndex <= nums.length - 1 && canJumpToEnd[newIndex]) {
+          canJumpToEnd[index] = true;
+          break;
+        }
       }
     }
-    this.tracking.add(index);
-    return false;
+
+    return canJumpToEnd[0];
   }
 
-  public static void main(String[] args) {
+  static void main() {
     JumpGame jumpGame = new JumpGame();
     System.out.println(jumpGame.canJump(new int[] { 2, 3, 1, 1, 4 }));
     System.out.println(jumpGame.canJump(new int[] { 3, 2, 1, 0, 4 }));
-    int[] largeArray = LoadArray.getInstance().loadIntArrayFromFile("src/main/resource/test-data/jump-game.txt");
+    int[] largeArray = LoadArray.getInstance().loadIntArrayFromFile("src/main/resources/test-data/jump-game.txt");
     LogTimeExecute.getInstance().log(unused -> jumpGame.canJump(largeArray));
   }
 }
