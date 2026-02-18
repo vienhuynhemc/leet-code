@@ -39,7 +39,7 @@ public class MaximumNumberOfVowelsInASubstringOfGivenLength {
     System.out.println(maximumNumberOfVowelsInASubstringOfGivenLength.maxVowels("leetcode", 3));
     System.out.println(maximumNumberOfVowelsInASubstringOfGivenLength.maxVowels("weallloveyou", 7));
     String largeString = LoadString.getInstance()
-      .loadStringFromFile("src/main/resource/test-data/maximum-number-of-vowels-in-a-substring-of-given-length.txt");
+      .loadStringFromFile("src/main/resources/test-data/maximum-number-of-vowels-in-a-substring-of-given-length.txt");
     LogTimeExecute.getInstance()
       .log(unused -> maximumNumberOfVowelsInASubstringOfGivenLength.maxVowels(largeString, 50436));
   }
