@@ -5,21 +5,21 @@ import java.util.Map;
 public class TwoSum {
 
   public int[] twoSum(int[] nums, int target) {
-    Map<Integer, Integer> map = new HashMap<>();
+    final Map<Integer, Integer> map = new HashMap<>();
+    final int[] result = new int[2];
 
-    int[] twoSum = new int[2];
+    for (int i = 0; i < nums.length; i++) {
+      final int remain = target - nums[i];
 
-    int n = nums.length;
-    for (int i = 0; i < n; i++) {
-      int remain = target - nums[i];
       if (map.containsKey(remain)) {
-        twoSum[0] = i;
-        twoSum[1] = map.get(remain);
-      } else {
-        map.put(nums[i], i);
+        result[0] = i;
+        result[1] = map.get(remain);
+        break;
       }
+
+      map.put(nums[i], i);
     }
 
-    return twoSum;
+    return result;
   }
 }
