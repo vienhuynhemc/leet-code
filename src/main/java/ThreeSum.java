@@ -6,56 +6,40 @@ import java.util.List;
 public class ThreeSum {
 
   public List<List<Integer>> threeSum(int[] nums) {
-    List<List<Integer>> triplets = new ArrayList<>();
-
     Arrays.sort(nums);
-    int length = nums.length;
-    int n = length - 2;
 
-    for (int i = 0; i < n; i++) {
-      if (i != 0 && nums[i] == nums[i - 1]) {
-        continue;
-      }
+    final List<List<Integer>> result = new ArrayList<>();
 
-      // Add fist number
-      List<Integer> triplet = new ArrayList<>();
-      triplet.add(nums[i]);
+    for (int i = 0; i < nums.length - 2; i++) {
+      if (i > 0 && nums[i] == nums[i - 1]) continue;
 
-      int remain = -nums[i];
-      // Two pointer
-      int left = i + 1;
-      int right = length - 1;
-      while (left < right) {
-        int sum = nums[left] + nums[right];
-        if (sum == remain) {
-          // Add remain two number
-          triplet.add(nums[left]);
-          triplet.add(nums[right]);
+      final int remain = -nums[i];
 
-          // Add triplet into triplets
-          triplets.add(triplet);
+      int leftIndex = i + 1;
+      int rightIndex = nums.length - 1;
 
-          // Reset triplet to prepare for next triplet
-          triplet = new ArrayList<>();
-          triplet.add(nums[i]);
+      while (leftIndex < rightIndex) {
+        final int sumOfTwoNums = nums[leftIndex] + nums[rightIndex];
 
-          int leftVal = nums[left];
-          left++;
-          while (left < right && nums[left] == leftVal) {
-            left++;
-          }
-        } else if (sum > remain) {
-          right--;
-        } else {
-          left++;
-        }
+        if (sumOfTwoNums == remain) {
+          final List<Integer> threeSum = new ArrayList<>();
+          threeSum.add(nums[i]);
+          threeSum.add(nums[leftIndex]);
+          threeSum.add(nums[rightIndex]);
+
+          result.add(threeSum);
+
+          int secondNum = nums[leftIndex++];
+          while (leftIndex < rightIndex && nums[leftIndex] == secondNum) leftIndex++;
+        } else if (sumOfTwoNums > remain) rightIndex--;
+        else leftIndex++;
       }
     }
 
-    return triplets;
+    return result;
   }
 
-  public static void main(String[] args) {
+  static void main() {
     ThreeSum threeSum = new ThreeSum();
     System.out.println(threeSum.threeSum(new int[] { -1, 0, 1, 2, -1, -4 }));
     System.out.println(threeSum.threeSum(new int[] { 0, 1, 1 }));
