@@ -7,38 +7,34 @@ import java.util.List;
 public class MergeIntervals {
 
   public int[][] merge(int[][] intervals) {
-    List<int[]> data = Arrays.stream(intervals).sorted(Comparator.comparingInt(o -> o[0])).toList();
-    List<int[]> storage = new ArrayList<>();
+    Arrays.sort(intervals, Comparator.comparingInt(o -> o[0]));
 
-    int i = 1;
-    int start = data.get(0)[0];
-    int end = data.get(0)[1];
-    while (i < intervals.length) {
-      if (data.get(i)[0] <= end) {
-        end = Math.max(end, data.get(i)[1]);
-        i++;
-        continue;
+    final List<int[]> storage = new ArrayList<>();
+
+    int index = 1;
+    int startInterval = intervals[0][0];
+    int endInterval = intervals[0][1];
+    while (index < intervals.length) {
+      if (intervals[index][0] <= endInterval) endInterval = Math.max(endInterval, intervals[index][1]);
+      else {
+        storage.add(new int[] { startInterval, endInterval });
+        startInterval = intervals[index][0];
+        endInterval = intervals[index][1];
       }
 
-      storage.add(new int[] { start, end });
-      start = data.get(i)[0];
-      end = data.get(i)[1];
-      i++;
-    }
-    if (start != -1) {
-      storage.add(new int[] { start, end });
+      index++;
     }
 
-    int[][] result = new int[storage.size()][];
-    for (int j = 0; j < result.length; j++) {
-      result[j] = storage.get(j);
-    }
+    storage.add(new int[] { startInterval, endInterval });
+
+    final int[][] result = new int[storage.size()][];
+    for (int j = 0; j < result.length; j++) result[j] = storage.get(j);
 
     return result;
   }
 
-  public static void main(String[] args) {
-    MergeIntervals service = new MergeIntervals();
+  static void main() {
+    final MergeIntervals service = new MergeIntervals();
     System.out.println(Arrays.deepToString(service.merge(new int[][] { { 1, 3 }, { 2, 6 }, { 8, 10 }, { 15, 18 } })));
     System.out.println(Arrays.deepToString(service.merge(new int[][] { { 1, 4 }, { 4, 5 } })));
     System.out.println(Arrays.deepToString(service.merge(new int[][] { { 1, 4 }, { 0, 4 } })));
